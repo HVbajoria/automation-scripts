@@ -106,7 +106,7 @@ class ChildScript(Script):
 							if WA_ID:
 								contact = self.WA_API.GetContactById(WA_ID)
 							else:
-								contact = self.WA_API.GetContactByEmail(waiver.email)[0]
+								contact = self.WA_API.GetContactByEmail(waiver.email.lower())[0]
 								WA_ID = contact['Id']
 							break
 							#print(contact)
